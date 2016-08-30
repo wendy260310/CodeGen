@@ -27,4 +27,8 @@ table_create="create table";
 
 while IFS='' read -r line || [[ -n "$line" ]] ; do
 	content=$( echo "$line" | awk ' {print tolower($0)}' )
+	if [[ "$content" =~ .*create.*table.* ]]
+	then
+		tableName=$(echo "$content" | awk '{print $(NF-1)}')
+	fi
 done < "$1"
