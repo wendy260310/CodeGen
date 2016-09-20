@@ -69,7 +69,7 @@ import java.util.List;
 
 @DAO(catalog="browser_local")   
 public interface $interfaceName {
-	String TABLE_NAME = "$1" ;
+	String TABLE_NAME = "\`$1\`" ;
 	String COLUMNS =  "$columns" ;
 	
 	@ReturnGeneratedKeys
