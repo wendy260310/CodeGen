@@ -87,6 +87,8 @@ public interface $interfaceName {
 	int updateRecord( $3 record);
 }
 EOF
+else
+	echo "sql file does not contains columns, make sure you have the right syntax "
 	fi
 }
 # read sql
