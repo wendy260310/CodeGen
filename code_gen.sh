@@ -85,6 +85,9 @@ public interface $interfaceName {
 
 	@SQL(" UPDATE "+TABLE_NAME+" SET $updateExp WHERE \`id\` =:1.id ") 
 	int updateRecord( $3 record);
+
+	@SQL(" SELECT \`id\`,"+COLUMNS+" FROM "+TABLE_NAME +" ##(:1) " )
+	List<$3> getRecordsByOptions( String options);
 }
 EOF
 else
