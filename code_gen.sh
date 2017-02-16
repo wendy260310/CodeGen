@@ -87,7 +87,7 @@ public interface $interfaceName {
 	int updateRecord( $3 record);
 
 	@SQL(" SELECT \`id\`,"+COLUMNS+" FROM "+TABLE_NAME +" ##(:1) " )
-	List<$3> getRecordsByOptions( String options);
+	List<$3> getRecordsByFilters( String filters);
 }
 EOF
 else
