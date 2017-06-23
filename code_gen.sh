@@ -74,7 +74,7 @@ public interface $interfaceName {
 	
 	@ReturnGeneratedKeys
 	@SQL(" INSERT INTO " +TABLE_NAME +" ( " + COLUMNS + " ) VALUES ( $insertExp ) ")
-	long add$3 ($3 record);
+	long save$3 ($3 record);
 
 	@SQL(" DELETE FROM "+TABLE_NAME+"WHERE \`id\`=:1")
 	int deleteRecordById(long id);
@@ -87,7 +87,7 @@ public interface $interfaceName {
 	int updateRecord( $3 record);
 
 	@SQL(" SELECT \`id\`,"+COLUMNS+" FROM "+TABLE_NAME +" ##(:1) " )
-	List<$3> getRecordsByFilters( String filters);
+	List<$3> listRecordsByFilters( String filters);
 }
 EOF
 else
